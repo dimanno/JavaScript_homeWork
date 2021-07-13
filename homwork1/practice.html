@@ -118,23 +118,23 @@
         },
     ];
         document.write(`<div>NAME - ${simpsons[0].name}, SURNAME - ${simpsons[0].surname}, AGE - ${simpsons[0].age}
-INFO - ${simpsons[0].info} <img src="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" alt="">
+            INFO - ${simpsons[0].info} <img src=${simpsons[0].photo} alt="bart">
         </div>`);
 
     document.write(`<div>NAME - ${simpsons[1].name}, SURNAME - ${simpsons[1].surname}, AGE - ${simpsons[1].age}
-INFO - ${simpsons[1].info} <img src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="">
+            INFO - ${simpsons[1].info} <img src=${simpsons[1].photo} alt="homer">
         </div>`);
 
     document.write(`<div>NAME - ${simpsons[2].name}, SURNAME - ${simpsons[2].surname}, AGE - ${simpsons[2].age}
-INFO - ${simpsons[2].info} <img src="https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png" alt="">
+            INFO - ${simpsons[2].info} <img src=${simpsons[2].photo} alt="marge">
         </div>`);
 
     document.write(`<div>NAME - ${simpsons[3].name}, SURNAME - ${simpsons[3].surname}, AGE - ${simpsons[3].age}
-INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png" alt="">
+            INFO - ${simpsons[3].info} <img src=${simpsons[3].photo} alt="lisa">
         </div>`);
 
     document.write(`<div>NAME - ${simpsons[3].name}, SURNAME - ${simpsons[3].surname}, AGE - ${simpsons[3].age}
-INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png" alt="">
+            INFO - ${simpsons[3].info} <img src=${simpsons[4].photo} alt="megie">
         </div>`);
 
     <!--template 2.2-->
@@ -142,7 +142,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
    document.write(`<div class="bart">
        <h2>NAME - ${simpsons[0].name}; SURNAME -  ${simpsons[0].surname}, age is - ${simpsons[0].age} AGE</h2>
        <div class="content d-flex">
-            <img width="200px" src="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" alt="">
+            <img width="200px" src=${simpsons[0].photo} alt="bart">
             <p>INFO: ${simpsons[0].info}</p>
        </div>
        </div>`);
@@ -150,7 +150,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
     document.write(`<div class="homer">
        <h2>NAME - ${simpsons[1].name}; SURNAME -  ${simpsons[1].surname}, age is - ${simpsons[1].age} AGE</h2>
        <div class="content d-flex">
-            <img width="200px" src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="">
+            <img width="200px" src=${simpsons[1].photo} alt="homer">
             <p>INFO: ${simpsons[1].info}</p>
        </div>
        </div>`);
@@ -158,7 +158,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
     document.write(`<div class="homer">
        <h2>NAME - ${simpsons[2].name}; SURNAME -  ${simpsons[2].surname}, age is - ${simpsons[2].age} AGE</h2>
        <div class="content d-flex">
-            <img width="200px" height="300px" src="https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png" alt="">
+            <img width="200px" height="300px" src=${simpsons[2].photo} alt="marge">
             <p>INFO: ${simpsons[2].info}</p>
        </div>
        </div>`);
@@ -166,7 +166,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
     document.write(`<div class="homer">
        <h2>NAME - ${simpsons[3].name}; SURNAME -  ${simpsons[3].surname}, age is - ${simpsons[3].age} AGE</h2>
        <div class="content d-flex">
-            <img width="200px" src="https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png" alt="">
+            <img width="200px" src=${simpsons[3].photo} alt="lisa">
             <p>INFO: ${simpsons[3].info}</p>
        </div>
        </div>`);
@@ -174,7 +174,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
     document.write(`<div class="homer">
        <h2>NAME - ${simpsons[4].name}; SURNAME -  ${simpsons[4].surname}, age is - ${simpsons[4].age} AGE</h2>
        <div class="content d-flex">
-            <img width="200px" src="https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png" alt="">
+            <img width="200px" src=${simpsons[4].photo} alt="megie">
             <p>INFO: ${simpsons[4].info}</p>
        </div>
        </div>`);
@@ -231,7 +231,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
 
         <div class="product-card ">
             <h3 class="product-title">TITLE - ${products[2].title}; Price - ${products[2].price}</h3>
-            <img width="200px" height="250px" src="https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74" class="product-image">
+            <img width="200px" height="250px" src="https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74" alt="tomato" class="product-image">
             <span class="buy d-flex">
                 <button>
             Замовити
@@ -241,7 +241,7 @@ INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9
 
         <div class="product-card ">
             <h3 class="product-title">TITLE - ${products[3].title}; Price - ${products[3].price}</h3>
-            <img width="200px" src="https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'" class="product-image">
+            <img width="200px" src="https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'" alt="tea" class="product-image">
             <span class="buy d-flex">
                 <button>
             Замовити
