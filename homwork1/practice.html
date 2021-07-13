@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        p {
+            background: silver;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        .d-flex {
+            display: flex;
+        }
+        img {
+            display: block;
+        }
+
+        .product-card {
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .product {
+            margin-top: 100px;
+            justify-content: space-evenly;
+        }
+
+        .buy {
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        button {
+            width: 150px;
+            height: 30px;
+            background: green;
+            color: white;
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background: #4ff52d;
+            color: black;
+            transition: 600ms;
+        }
+
+    </style>
+</head>
+<body>
+
+<script>
+
+    // <!--        template 1.1-->
+
+    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+
+    document.write(`<ul>
+    <li>${listOfItems[0]}</li>
+    <li>${listOfItems[1]}</li>
+    <li>${listOfItems[2]}</li>
+    <li>${listOfItems[4]}</li>
+    <li>${listOfItems[5]}</li>
+</ul>`);
+
+</script>
+
+<!--template 2.1-->
+
+<script>
+
+    let simpsons = [
+        {
+            name: 'Bart',
+            surname: 'Simpson',
+            age: 10,
+            info: 'Бартолом\'ю ДжоДжо «Барт» Сімпсон (англ. Bartholomew JoJo «Bart» Simpson) — один із головних героїв мультиплікаційного серіалу Сімпсони. Барт — найстарша дитина Гомера і Мардж Сімпсон. У нього також є дві молодші сестри — Ліса і Меґґі. Барт є втіленням образу бешкетника та посереднього учня у школі. Разом зі своїм батьком Барт є одним із найвідоміших персонажів у цьому серіалі.',
+            photo: 'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'
+        },
+        {
+            name: 'Homer',
+            surname: 'Simpson',
+            age: 40,
+            info: 'Гомер Джей Сімпсон (англ. Homer Jay Simpson) — один із головних героїв мультсеріалу «Сімпсони». Гомер — грубий і неввічливий батько родини, він має очевидні вади: товстий, лисий і не дуже розумний. Нерідко він поводиться як блазень, абсурдно, егоїстично і нетактовно, але все ж лишається симпатичним.',
+            photo: 'http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png'
+        },
+        {
+            name: 'Marge',
+            surname: 'Simpson',
+            age: 38,
+            info: 'Ма́рджори Жакли́н «Мардж» Си́мпсон (в девичестве Бувье́) (англ. Marjorie Jacqueline «Marge» Simpson) — постоянный персонаж мультипликационного сериала «Симпсоны», её озвучивает Джулия Кавнер. Обычно носит зелёное платье, красные балетки, на шее — ожерелье из искусственного жемчуга и ездит на оранжевом универсале. У неё шикарные синие волосы, которые она обычно собирает в очень высокую причёску. Глаза цвета ореха (19s6e). Основное занятие — домохозяйка, большую часть времени проводит в заботе о доме, детях и Гомере.',
+            photo: 'https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png'
+        },
+        {
+            name: 'Lisa',
+            surname: 'Simpson',
+            age: 9,
+            info: 'Ли́за Мари́ Си́мпсон (англ. Lisa Marie Simpson) — героиня мультипликационного сериала «Симпсоны». Средний ребёнок в семье, восьмилетняя девочка, выделяющаяся среди остальных Симпсонов прежде всего своим умом и рассудительностью.',
+            photo: 'https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png'
+        },
+        {
+            name: 'Maggie',
+            surname: 'Simpson',
+            age: 1,
+            info: 'Ма́ргарет Эвелин «Мэ́гги» Си́мпсон (англ. Margaret Evelyn “Maggie” Simpson) — персонаж мультсериала «Симпсоны». Впервые появилась на телевидении в шоу Трейси Ульман, в короткометражке Good Night (англ.)русск. 19 апреля 1987 года. Мэгги была придумана и разработана карикатуристом Мэттом Грейнингом, пока он ждал встречи с Джеймсом Л. Бруксом. Названа в честь младшей сестры Грейнинга. После появления в шоу Трейси Ульман, через три года семья Симпсонов получила собственный сериал на телеканале Fox, дебют произошёл 17 декабря 1989 года.',
+            photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
+        },
+    ];
+        document.write(`<div>NAME - ${simpsons[0].name}, SURNAME - ${simpsons[0].surname}, AGE - ${simpsons[0].age}
+INFO - ${simpsons[0].info} <img src="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" alt="">
+        </div>`);
+
+    document.write(`<div>NAME - ${simpsons[1].name}, SURNAME - ${simpsons[1].surname}, AGE - ${simpsons[1].age}
+INFO - ${simpsons[1].info} <img src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="">
+        </div>`);
+
+    document.write(`<div>NAME - ${simpsons[2].name}, SURNAME - ${simpsons[2].surname}, AGE - ${simpsons[2].age}
+INFO - ${simpsons[2].info} <img src="https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png" alt="">
+        </div>`);
+
+    document.write(`<div>NAME - ${simpsons[3].name}, SURNAME - ${simpsons[3].surname}, AGE - ${simpsons[3].age}
+INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png" alt="">
+        </div>`);
+
+    document.write(`<div>NAME - ${simpsons[3].name}, SURNAME - ${simpsons[3].surname}, AGE - ${simpsons[3].age}
+INFO - ${simpsons[3].info} <img src="https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png" alt="">
+        </div>`);
+
+    <!--template 2.2-->
+
+   document.write(`<div class="bart">
+       <h2>NAME - ${simpsons[0].name}; SURNAME -  ${simpsons[0].surname}, age is - ${simpsons[0].age} AGE</h2>
+       <div class="content d-flex">
+            <img width="200px" src="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" alt="">
+            <p>INFO: ${simpsons[0].info}</p>
+       </div>
+       </div>`);
+
+    document.write(`<div class="homer">
+       <h2>NAME - ${simpsons[1].name}; SURNAME -  ${simpsons[1].surname}, age is - ${simpsons[1].age} AGE</h2>
+       <div class="content d-flex">
+            <img width="200px" src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="">
+            <p>INFO: ${simpsons[1].info}</p>
+       </div>
+       </div>`);
+
+    document.write(`<div class="homer">
+       <h2>NAME - ${simpsons[2].name}; SURNAME -  ${simpsons[2].surname}, age is - ${simpsons[2].age} AGE</h2>
+       <div class="content d-flex">
+            <img width="200px" height="300px" src="https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png" alt="">
+            <p>INFO: ${simpsons[2].info}</p>
+       </div>
+       </div>`);
+
+    document.write(`<div class="homer">
+       <h2>NAME - ${simpsons[3].name}; SURNAME -  ${simpsons[3].surname}, age is - ${simpsons[3].age} AGE</h2>
+       <div class="content d-flex">
+            <img width="200px" src="https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png" alt="">
+            <p>INFO: ${simpsons[3].info}</p>
+       </div>
+       </div>`);
+
+    document.write(`<div class="homer">
+       <h2>NAME - ${simpsons[4].name}; SURNAME -  ${simpsons[4].surname}, age is - ${simpsons[4].age} AGE</h2>
+       <div class="content d-flex">
+            <img width="200px" src="https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png" alt="">
+            <p>INFO: ${simpsons[4].info}</p>
+       </div>
+       </div>`);
+
+</script>
+
+<!--        template 3.1-->
+
+<script>
+
+    let products = [
+        {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },
+    ];
+
+        document.write(`<div class="product d-flex">
+        <div class="product-card ">
+            <h3 class="product-title">TITLE - ${products[0].title}; Price - ${products[0].price}</h3>
+            <img width="200px" height="250px" src="https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg" alt="milk" class="product-image">
+            <span class="buy d-flex">
+                <button>
+            Замовити
+                </button>
+            </span>
+        </div>
+
+        <div class="product-card ">
+            <h3 class="product-title">TITLE - ${products[1].title}; Price - ${products[1].price}</h3>
+            <img width="200px" height="250px" src="https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg" alt="juce" class="product-image">
+            <span class="buy d-flex">
+                <button>
+            Замовити
+                </button>
+            </span>
+        </div>
+
+        <div class="product-card ">
+            <h3 class="product-title">TITLE - ${products[2].title}; Price - ${products[2].price}</h3>
+            <img width="200px" height="250px" src="https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74" class="product-image">
+            <span class="buy d-flex">
+                <button>
+            Замовити
+                </button>
+            </span>
+        </div>
+
+        <div class="product-card ">
+            <h3 class="product-title">TITLE - ${products[3].title}; Price - ${products[3].price}</h3>
+            <img width="200px" src="https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'" class="product-image">
+            <span class="buy d-flex">
+                <button>
+            Замовити
+                </button>
+            </span>
+        </div>
+
+    </div>`)
+
+
+</script>
+
+
+<!--    /*-->
+<!--    Використовуючи данні з масиву, за допомоги document.write-->
+<!--    побудувати структуру по шаблону template1.1-->
+<!--    */-->
+
+<!--    /*-->
+<!--    Використовуючи данні з масиву, за допомоги document.write-->
+<!--    побудувати структуру по шаблону template2.1 & template2.2. Зробити адекватну стилізацію.-->
+<!--    Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон.-->
+<!--    Шаблон застосувати до кожного об'єкта в масиві-->
+<!--    */-->
+
+
+<!--    /*-->
+<!--    Використовуючи данні з масиву, за допомоги document.write-->
+<!--    побудувати структуру по шаблону template3.1 Зробити адекватну стилізацію-->
+<!--    Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон-->
+<!--        */-->
+
+</body>
+</html>
