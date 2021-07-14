@@ -1,0 +1,21 @@
+.box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.post-card {
+    width: 20% ;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px red solid;
+    text-align: center;
+    border-radius: 20px;
+}
+
+p {
+    background: silver;
+    border-radius: 10px;
+}
+
