@@ -82,8 +82,77 @@ for (b = 0; b < bus.length; b++) {
 
 let masyv1 = [12, 'car', 'bicicle', true, 44, 678, false, 'forest', 90, 'mountain']
 for (let i = 0; i < masyv1.length; i++) {
-    if (typeof masyv1[i] === 'bullen'){
-        console.log(masyv[i])
+    if (typeof masyv1[i] === 'boolean'){
+        console.log(masyv1[i]);
+    }
+}
+// За допомогою if та typeof вивести тільки числові елементи
+
+for (let i = 0; i < masyv1.length; i++) {
+    if (typeof masyv1[i] === 'number'){
+        console.log(masyv1[i]);
     }
 }
 
+// За допомогою if та typeof вивести тільки сирічкові елементи
+
+for (let i = 0; i < masyv1.length; i++) {
+    if (typeof masyv1[i] === 'string'){
+        console.log(masyv1[i]);
+    }
+}
+
+// - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+
+let study = [];
+study[0] = 'world';
+study[1] = 'peaple';
+study[2] = true;
+study[3] = 100;
+study[4] = 22;
+study[5] = '0';
+study[6] = 'country';
+study[7] = 200;
+study[8] = false;
+study[9] = 300;
+
+for (let i = 0; i < study.length; i++) {
+    console.log(study[i]);
+}
+
+// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 10; i++) {
+    console.log('Step -', i);
+    document.write(`<ul>
+                        <li>Step: ${i}</li>
+                    </ul>`);
+}
+
+// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+for (let a = 0; a < 100; a++) {
+    console.log('Step -', a);
+    document.write(`<ul>
+                        <li>Step: ${a}</li>
+                    </ul>`);
+}
+
+// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 100; i = i+2) {
+    console.log('Step -', i);
+    document.write(`<ul>
+                        <li>Step: ${i}</li>
+                    </ul>`);
+}
+
+// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+
+
+
+//     for (let u = 0; u < 100; u++){
+//     if (u%2 === 1){
+//         console.log(`step :`, u);
+//         document.write(`step : ${u}`);
+//     }
+// };
