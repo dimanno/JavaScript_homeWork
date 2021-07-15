@@ -1,0 +1,66 @@
+.wrap {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.simpson {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+p {
+    background: silver;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.d-flex {
+    display: flex;
+}
+img {
+    display: block;
+}
+
+.product-card {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+}
+
+.product {
+    margin-top: 100px;
+    justify-content: space-evenly;
+}
+
+.buy {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    background: green;
+    color: white;
+    border-radius: 20px;
+}
+
+button:hover {
+    background: #4ff52d;
+    color: black;
+    transition: 600ms;
+}
+
+h1 {
+    padding: 10px;
+}

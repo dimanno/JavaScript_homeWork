@@ -133,7 +133,7 @@ for (let i = 0; i < 10; i++) {
 for (let a = 0; a < 100; a++) {
     console.log('Step -', a);
     document.write(`<ul>
-                        <li>Step: ${a}</li>
+                        <li style="background: silver">Step: ${a}</li>
                     </ul>`);
 }
 
@@ -142,17 +142,55 @@ for (let a = 0; a < 100; a++) {
 for (let i = 0; i < 100; i = i+2) {
     console.log('Step -', i);
     document.write(`<ul>
-                        <li>Step: ${i}</li>
+                        <li style="background: lightblue">Step: ${i}</li>
                     </ul>`);
 }
 
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 
+for (let a = 0; a < 100; a++) {
+    if (a%2 === 0) {
+        console.log('Step -', a);
+        document.write(`<ul>
+                        <li style="background: lightgray">Step: ${a}</li>
+                    </ul>`);
+    }
+}
+
+// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+    for (let a = 0; a < 100; a++){
+    if (a%2 === 1){
+        console.log(`step :`, a);
+        document.write(`<ul>
+                        <li style="background: lightgreen">Step: ${a}</li>
+                    </ul>`);
+    }
+};
+
+// - Дано 2 масиви з рівною кількістю об'єктів.
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+//     Записати цей об'єкт в новий масив
+
+let usersWithId = [
+    {id: 1, name: 'vasya', age: 31, status: false},
+    {id: 2, name: 'petya', age: 30, status: true},
+    {id: 3, name: 'kolya', age: 29, status: true},
+    {id: 4, name: 'olya', age: 28, status: false}
+];
+
+let citiesWithId = [
+    {user_id: 3, country: 'USA', city: 'Portland'},
+    {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    {user_id: 2, country: 'Poland', city: 'Krakow'},
+    {user_id: 4, country: 'USA', city: 'Miami'}
+];
 
 
-//     for (let u = 0; u < 100; u++){
-//     if (u%2 === 1){
-//         console.log(`step :`, u);
-//         document.write(`step : ${u}`);
-//     }
-// };
+for (let user of usersWithId) {
+    for (let city of citiesWithId) {
+        if (user.id === city.user_id) {
+            user.adress = city
+        }
+    }
+}
+console.log(usersWithId)
