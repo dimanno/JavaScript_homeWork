@@ -123,3 +123,42 @@ let sort = clientsList.sort(function (client1, client2) {
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+class Popel {
+        name;
+        age;
+        sizeLeg
+    constructor(name, age, sizeLeg) {
+        this.name = name;
+        this.age = age;
+        this.sizeLeg = sizeLeg;
+    }
+}
+
+let popels = [
+    new Popel('Suzi', 16, 36),
+    new Popel('Julia', 17, 31),
+    new Popel('Marta', 24, 32),
+    new Popel('Odri', 42, 34),
+    new Popel('Martela', 32, 37),
+    new Popel('Sindi', 19, 38),
+    new Popel('Nensi', 65, 39),
+    new Popel('Faina', 20, 40),
+    new Popel('Lusi', 28, 41),
+    new Popel('Katrin', 34, 42),
+]
+
+class Prince extends Popel {
+
+    constructor(name, age, sizeLeg) {
+        super(name, age, sizeLeg);
+    }
+}
+
+let men = new Prince('Don Juan', '22', 36);
+
+for (let newPopel of popels) {
+    if (newPopel.sizeLeg === men.sizeLeg) {
+        console.log(newPopel.name + ' - ' + men.name)
+    }
+}
