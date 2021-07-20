@@ -40,33 +40,33 @@ let sort = clientsList.sort(function (client1, client2) {
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 
-// function Car(model, produce, year, maxSpeed, v,) {
-//     this.model = model;
-//     this.produce = produce;
-//     this.year = year;
-//     this.maxSpeed = maxSpeed;
-//     this.v = v;
-//     this.driver = function () {
-//         console.log('Їдемо зі швидкістю ' + this.maxSpeed + ' на годину');
-//     }
-//     this.info = function () {
-//         console.log(cars)
-//     }
-//     this.increaseMaxSpeed = function (newSpeed) {
-//         this.maxSpeed += newSpeed
-//     }
-//     this.changeYear = function (newValue) {
-//         this.year = newValue
-//     }
-//     this.addDriver = function (newDriver) {
-//         this.driver = newDriver
-//     }
-// };
+function Car(model, produce, year, maxSpeed, v,) {
+    this.model = model;
+    this.produce = produce;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.v = v;
+    this.driver = function () {
+        console.log('Їдемо зі швидкістю ' + this.maxSpeed + ' на годину');
+    }
+    this.info = function () {
+        console.log(cars)
+    }
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.maxSpeed += newSpeed
+    }
+    this.changeYear = function (newValue) {
+        this.year = newValue
+    }
+    this.addDriver = function (newDriver) {
+        this.driver = newDriver
+    }
+};
 
-// let driver = {
-//     name: "super driver",
-//     age: 30
-// }
+let driver = {
+    name: "super driver",
+    age: 30
+}
 
 // let cars = new Car('X7', 'BMW', 2020, 280, 3.0,);
 
@@ -154,7 +154,6 @@ class Prince extends Popel {
         super(name, age, sizeLeg);
     }
 }
-
 let men = new Prince('Don Juan', '22', 36);
 
 for (let newPopel of popels) {
@@ -162,3 +161,12 @@ for (let newPopel of popels) {
         console.log(newPopel.name + ' - ' + men.name)
     }
 }
+
+let findPopel = popels.find(function (correctSize){
+   for (let newPopel of popels) {
+        if (newPopel.sizeLeg === men.sizeLeg) {
+            return newPopel
+        }
+    }
+})
+console.log(findPopel)
