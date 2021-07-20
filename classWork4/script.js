@@ -68,14 +68,14 @@ let driver = {
     age: 30
 }
 
-// let cars = new Car('X7', 'BMW', 2020, 280, 3.0,);
+let cars = new Car('X7', 'BMW', 2020, 280, 3.0,);
 
-// cars.driver();
-// cars.info();
-// cars.increaseMaxSpeed(50);
-// cars.changeYear(2021);
-// cars.addDriver('Tadey');
-// console.log(cars);
+cars.driver();
+cars.info();
+cars.increaseMaxSpeed(50);
+cars.changeYear(2021);
+cars.addDriver('Tadey');
+console.log(cars);
 
 
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
