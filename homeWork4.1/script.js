@@ -1,22 +1,25 @@
 // - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
 // Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
 
-function User(id, name, username, email, street, suite, city, zipcode, lat, lng ) {
+function User(id, name, username, email, street, suite, city, zipcode) {
     this.id = id;
     this.name = name;
     this.username = username;
     this.email = email;
-    this.
-    this.address.street = street;
-    this.address.suit = suite;
-    this.address.zipcode = zipcode;
-    this.address.geo.lat = lat;
-    this.address.geo.lng = lng;
+    this.address = new Address(street, suite,city,zipcode)
+
 }
 
+function Address(street, suite, city, zipcode){
+    this.street = street;
+    this.suite =suite;
+    this.city = city
+    this.zipcode =zipcode
+
+}
 let users = [
     new User(1,'Leanne Graham','Bret','Sincere@april.biz',
-        'Kulas Light','Apt. 556,', 'Gwenborough', '92998-3874', '-37.3159', '81.1496')
+        'Kulas Light','Apt. 556,', 'Gwenborough', '92998-3874', '-37.3159', '81.1496',{})
 ]
 
 console.log(users)
