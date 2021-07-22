@@ -63,7 +63,14 @@ console.log(users)
 
     class Object {
         name;
+        act;
+        car;
 
+        constructor(name, act, car) {
+            this.name = name;
+            this.act = act;
+            this.car = car;
+        }
     }
     -назва тегу ()
 - опис його дій
