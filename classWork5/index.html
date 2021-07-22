@@ -34,28 +34,77 @@
     // a) змінює колір тексту елемнту з ід main_header на назву групи в якій ви вчитесь (mon-year)
 
 
-    let titleColor = document.getElementById("main_header");
-    titleColor.style.color = 'red'
-    let titleText = document.getElementsByTagName("h1");
-    titleText.style.innerText = 'June-2021-Incubator';
-    console.log(titleText);
+    let title = document.getElementById("main_header");
+    title.style.color = 'red';
+    title.innerText = 'June-2021-Incubator'
+
 
     // b) робить шириниу елементу ul 400px
 
-    ul = document.getElementsByTagName("ul")
-    ul.style.width = '400px'
-    // for (let li of Ul) {
-    //     li.style.width = '400px'
-    // }
-
-
+    ulList = document.getElementsByTagName("ul");
+    for (let ul of ulList) {
+        ul.style.width = '400px'
+    }
 
     // c) робить шириниу всіх елементів з класом linkList шириною 50%
 
-   let linkList = document.getElementsByClassName('linkList')
+   let linkList = document.getElementsByClassName('linkList');
     for (let linkListElement of linkList) {
         linkListElement.style.width = '50px'
     }
+
+    // d) отримує текст який зберігається в елементі з класом listElement2
+
+    // let  listElement2text = document.getElementsByClassName('listElement2');
+    // for (let textElement of listElement2text) {
+    //     console.log(textElement.textContent);
+    // }
+
+    // e) отримує всі елементи li та змінює ім колір фону на сірий
+
+    // let list = document.getElementsByTagName('li');
+    // for (let listElement of list) {
+    //     listElement.style.background = 'blue'
+    // }
+
+    // f) отримує всі елементи 'a' та додає їм клас anchor
+
+    let elementsA = document.getElementsByTagName('a');
+    for (let aElement of elementsA) {
+        aElement.classList.add('anchor')
+        console.log(aElement);
+    }
+
+    // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому
+    // розмір тексту на 40 пікселів
+
+    let anchor = document.getElementsByClassName('anchor');
+    for (let anchorElement of anchor) {
+        console.log(anchorElement.textContent);
+        if (anchorElement.textContent === 'link3'){
+            anchorElement.style.fontsize = '40px'
+        }
+    }
+
+    // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
+
+    for (let aElement of elementsA) {
+        aElement.classList.add('element_XXX')
+        let xxx = document.getElementsByClassName('element_XXX')
+        for (let xxx1 of xxx) {
+            xxx1.innerText = 'xxx'
+        }
+    }
+
+    // i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
+
+let subHeader = document.getElementsByClassName('sub-header');
+    for (let subHeaderElement of subHeader) {
+        subHeaderElement.style.background = prompt('enter number');
+    }
+
+    // j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+
 
 </script>
 
