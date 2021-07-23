@@ -6,5 +6,17 @@
 </head>
 <body>
 
+
+<script>
+<!--Виводить інформацію з localStorage введене в інпут на сторінці index.html-->
+    let nameFromInput = localStorage.getItem('inputName.value');
+   const userName = document.createElement('div');
+    userName.innerText = nameFromInput;
+
+    document.body.appendChild(userName);
+
+</script>
+
+
 </body>
 </html>
