@@ -10,16 +10,17 @@ const showlist = () => {
     }
 const buttonAll = document.createElement('button');
 for (const itemOfStore of store) {
+    console.log(itemOfStore)
     const productbox = document.createElement('div');
     const nameL = document.createElement('div');
     const productImg = document.createElement('img');
     const quantityL = document.createElement('div');
     const priceL = document.createElement('div');
     const button = document.createElement('button');
-        nameL.innerText = "Name: ${itemOfStore.nameL}"
-        productImg.src = itemOfStore.img
-        priceL.innerText = 'Price: ${itemOfStore.priceL}'
-        quantityL.innerText = 'quantity: ${itemOfStore.quantityL}'
+        nameL.innerText = `Name: ${itemOfStore.productNane}`;
+        productImg.src = itemOfStore.pictures;
+        priceL.innerText = `Price: ${itemOfStore.price}`;
+        quantityL.innerText = `quantity: ${itemOfStore.quantityL}`;
         button.innerText = 'Delete'
         buttonAll.innerText = 'DeleteAll'
         button.onclick = () => {
