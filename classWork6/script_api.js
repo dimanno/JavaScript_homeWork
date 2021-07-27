@@ -13,7 +13,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 postContent.innerText = `${post.body}`;
                 divPost.appendChild(postContent);
                 const button = document.createElement('button');
-                button.innerText = 'View comrnts';
+                button.innerText = 'View coments';
                 button.addEventListener('click', () => {
                     fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
                         .then(value => value.json())
