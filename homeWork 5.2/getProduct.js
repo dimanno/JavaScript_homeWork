@@ -36,7 +36,7 @@ const save = (productName, quantityProduct, price, pictures) => {
     //  збережені у локал сторідж, або вже існуючим даним (ключам) у локал сторедж, які дістаємо і парсаємо через
     //  JSON для подальшої їх обробки через JS
      store.push({id:Math.random(), productName, quantityProduct, price, pictures})
-    // Запушили введені обєкти інпутів, які берігаються у локал сторідж + рандомну id
+    // Запушили введені обєкти інпутів, які зберігаються у локал сторідж + рандомну id
     localStorage.setItem(key, JSON.stringify(store))
     // Зберігаємо дані у localStorage, який приймає два аргументи - ключ та значення (value)
 }
