@@ -1,9 +1,9 @@
 
 
-function myWorkDay(getUp,cb) {
+function myWorkDay(getUpTime,cb) {
     setTimeout(() => {
         console.log('Good morning чувак');
-        if (getUp > 8) {
+        if (getUpTime > 8) {
             console.log('Ти проспав!');
             cb ('Ти приїдеш не вчасно', null)
         } else {
@@ -13,10 +13,15 @@ function myWorkDay(getUp,cb) {
     },2000)
 }
 
-function makeShower(cb) {
+function makeShower(water, cb) {
     setTimeout(() => {
-        console.log('Прийми душ');
-        cb ('Dane');
+        if (water = true) {
+            console.log('Прийми душ');
+            cb (null, 'Dane');
+        } else {
+            console.log('mission inposible');
+            cb ('continue', null);
+        }
     }, 1000);
 }
 
@@ -80,31 +85,35 @@ myWorkDay(7, (err, startMyWorkDay) => {
     if (err) {
         console.error(err);
     } else {
-        makeShower((showerDone) => {
-            prepareBreakfest((breakfest_dane) => {
-                takeBicycle((bicycleDane) => {
-                    goToWork((goDane) => {
-                        startWork((workDane) => {
-                            callBackHell((cbDane) => {
-                                needBreak((breakDane) => {
-                                    haveLanch((lanchDane) => {
-                                        finish((done) => {
-                                            console.log(done);
+        makeShower(true, (err, showerDone) => {
+            if (err) {
+                console.error(err);
+            } else {
+                prepareBreakfest((breakfest_dane) => {
+                    takeBicycle((bicycleDane) => {
+                        goToWork((goDane) => {
+                            startWork((workDane) => {
+                                callBackHell((cbDane) => {
+                                    needBreak((breakDane) => {
+                                        haveLanch((lanchDane) => {
+                                            finish((done) => {
+                                                console.log(done);
+                                            })
+                                            console.log(lanchDane);
                                         })
-                                        console.log(lanchDane);
+                                        console.log(breakDane);
                                     })
-                                    console.log(breakDane);
+                                    console.log(cbDane);
                                 })
-                                console.log(cbDane);
+                                console.log(workDane);
                             })
-                            console.log(workDane);
+                            console.log(goDane);
                         })
-                        console.log(goDane);
+                        console.log(bicycleDane);
                     })
-                    console.log(bicycleDane);
+                    console.log(breakfest_dane);
                 })
-                console.log(breakfest_dane);
-            })
+            }
             console.log(showerDone);
         })
     };

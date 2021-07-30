@@ -4,10 +4,10 @@ function myWorkDay(getUpTime) {
             console.log('Good morning чувак');
             if (getUpTime > 8) {
                 console.log('Ти проспав!');
-                reject ('Ти приїдеш не вчасно')
+                reject ();
             } else {
-                console.log('На тебе чекає JavaScript');
-                resolve ();
+                // console.log('На тебе чекає JavaScript');
+                resolve ('На тебе чекає JavaScript');
             }
         },2000)
     })
@@ -17,8 +17,8 @@ function myWorkDay(getUpTime) {
 function makeShower() {
         return new Promise (resolve => {
         setTimeout(() => {
-            console.log('Прийми душ');
-            resolve ();
+            // console.log('Приймаю душ');
+            resolve ('Приймаю душ');
         }, 1000);
     })
 };
@@ -26,8 +26,8 @@ function makeShower() {
 function prepareBreakfest() {
     return new Promise (resolve => {
         setTimeout(() => {
-            console.log('Сніданок готовий');
-            resolve();
+            // console.log('Снідаю');
+            resolve('Снідаю');
         }, 500);
     })
 }
@@ -35,8 +35,8 @@ function prepareBreakfest() {
 function takeBicycle() {
     return new Promise( reselve => {
         setTimeout(() => {
-            console.log('беру двоколісного друга');
-            reselve ();
+            // console.log('Беру двоколісного друга');
+            reselve ('Беру двоколісного друга');
         }, 1500);
     })
 }
@@ -44,8 +44,8 @@ function takeBicycle() {
 function goToWork() {
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log('оминаю львівські затори')
-            resolve ();
+            // console.log('Оминаю львівські затори')
+            resolve ('Оминаю львівські затори');
         }, 2500);
     })
 }
@@ -53,8 +53,8 @@ function goToWork() {
 function startWork() {
    return new Promise(resolve => {
        setTimeout(() => {
-           console.log('Hello JS');
-           resolve();
+           // console.log('Hello JS');
+           resolve('Hello JS');
        }, 800);
    })
 }
@@ -62,8 +62,8 @@ function startWork() {
 function callBackHell() {
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log('ох лайно! як багато роботи')
-            resolve ();
+            // console.log('ох лайно! як багато роботи')
+            resolve ('ох лайно! як багато роботи');
         }, 3000);
     })
 }
@@ -71,8 +71,8 @@ function callBackHell() {
 function needBreak() {
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log('Потребую перерви');
-            resolve ();
+            // console.log('Потребую перерви');
+            resolve ('Потребую перерви');
         }, 400);
     })
 }
@@ -80,8 +80,8 @@ function needBreak() {
 function haveLanch() {
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log('Іду на обід');
-            resolve ();
+            // console.log('Іду на обід');
+            resolve ('Іду на обід');
         }, 700);
     })
 }
@@ -89,35 +89,47 @@ function haveLanch() {
 function finish() {
     return new Promise(resolve => {
         setTimeout(() => {
-            console.log('Робота успішно завершина - молодець');
-            resolve();
+            // console.log('Робота успішно завершина - молодець');
+            resolve('Робота успішно завершина - молодець');
         }, 1200);
     })
 }
 
 myWorkDay(7)
-    .then(() => {
+    .then((startDay) => {
+        console.log(startDay);
         return makeShower();
     })
-    .then(() => {
+    .then((shower) => {
+        console.log(shower);
+        return prepareBreakfest();
+    })
+    .then((breakfest) => {
+        console.log(breakfest)
         return takeBicycle();
     })
-    .then(() => {
+    .then((bicycle) => {
+        console.log(bicycle);
         return goToWork();
     })
-    .then(()=> {
-    return startWork();
+    .then((go)=> {
+        console.log(go);
+        return startWork();
     })
-    .then(()=> {
+    .then((work)=> {
+        console.log(work);
         return callBackHell();
     })
-    .then(()=> {
-       return needBreak();
+    .then((hardWork)=> {
+        console.log(hardWork);
+        return needBreak();
     })
-    .then(()=> {
+    .then((breakW)=> {
+        console.log(breakW);
         return haveLanch();
     })
-    .then(() => {
+    .then((lanch) => {
+        console.log(lanch);
         return finish()
     })
     .catch((reason) => {

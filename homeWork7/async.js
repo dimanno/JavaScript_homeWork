@@ -3,8 +3,7 @@ function myWorkDay(getUpTime) {
         setTimeout(() => {
             console.log('Good morning чувак');
             if (getUpTime > 8) {
-                console.log('Ти проспав!');
-                reject ('Ти приїдеш не вчасно')
+                reject ('looser');
             } else {
                 console.log('На тебе чекає JavaScript');
                 resolve ();
@@ -96,16 +95,21 @@ function finish() {
 }
 
 async function workDay () {
-    const day = myWorkDay(7);
-    await makeShower();
-    await prepareBreakfest();
-    await takeBicycle();
-    await goToWork();
-    await startWork();
-    await callBackHell();
-    await needBreak();
-    await haveLanch();
-    await finish();
+    try {
+        const day = await myWorkDay(9);
+        const shower = await makeShower();
+        await prepareBreakfest();
+        await takeBicycle();
+        await goToWork();
+        await startWork();
+        await callBackHell();
+        await needBreak();
+        await haveLanch();
+        await finish();
+    } catch (reason) {
+        console.log('Ти проспав!');
+        console.log(reason);
+    }
 }
 
 workDay();
