@@ -15,12 +15,11 @@ function myWorkDay(getUpTime,cb) {
 
 function makeShower(water, cb) {
     setTimeout(() => {
-        if (water = true) {
+        if (water === true) {
             console.log('Прийми душ');
             cb (null, 'Dane');
         } else {
-            console.log('mission inposible');
-            cb ('continue', null);
+            cb ('mission inposible', null);
         }
     }, 1000);
 }
@@ -83,11 +82,11 @@ function finish() {
 
 myWorkDay(7, (err, startMyWorkDay) => {
     if (err) {
-        console.error(err);
+        console.log(err);
     } else {
         makeShower(true, (err, showerDone) => {
             if (err) {
-                console.error(err);
+                console.log(err);
             } else {
                 prepareBreakfest((breakfest_dane) => {
                     takeBicycle((bicycleDane) => {

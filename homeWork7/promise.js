@@ -14,14 +14,19 @@ function myWorkDay(getUpTime) {
 };
 
 
-function makeShower() {
-        return new Promise (resolve => {
+function makeShower(water) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            // console.log('Приймаю душ');
-            resolve ('Приймаю душ');
+            if (water === true) {
+                // console.log('Прийми душ');
+                resolve ('Прийми душ')
+            } else {
+                console.log('mission inposible');
+                reject ();
+            }
         }, 1000);
     })
-};
+}
 
 function prepareBreakfest() {
     return new Promise (resolve => {
@@ -98,7 +103,7 @@ function finish() {
 myWorkDay(7)
     .then((startDay) => {
         console.log(startDay);
-        return makeShower();
+        return makeShower(true);
     })
     .then((shower) => {
         console.log(shower);
