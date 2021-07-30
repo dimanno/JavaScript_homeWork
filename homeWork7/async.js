@@ -99,6 +99,13 @@ async function workDay () {
     const day = myWorkDay(7);
     await makeShower();
     await prepareBreakfest();
+    await takeBicycle();
+    await goToWork();
+    await startWork();
+    await callBackHell();
+    await needBreak();
+    await haveLanch();
+    await finish();
 }
 
 workDay();
