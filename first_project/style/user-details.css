@@ -1,0 +1,22 @@
+body {
+    display: flex;
+}
+
+#wrap-user {
+    justify-content: center;
+    border: 1px red solid;
+    text-align: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h2 {
+    color: red;
+}
+
+button {
+    width: 90%;
+    background: green;
+    color: white;
+}
