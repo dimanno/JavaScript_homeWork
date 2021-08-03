@@ -1,45 +1,31 @@
-// console.log(location.href);
 
 const url = new URL(location);
-// console.log(url);
 const jsonUser = url.searchParams.get('user');
-// console.log(jsonUser);
 const user = JSON.parse(jsonUser);
 console.log(user);
 
 const wrap = document.getElementById('wrap-user');
 
-
-// function getInfo(obj) {
-//     for (const i in obj) {
-//         // const box = document.createElement('p');
-//         if (obj.hasOwnProperty(i)) {
-//             console.log(i)
-//         }
-//     }
-//     console.log(getInfo(user));
-
-//     const box = document.createElement('p');
-
-//     // box.innerText = infoUser;
-//     if (Object.keys(user) === Object) {
-//         box.innerText = Object.entries(user);
-//     }
-//     wrap.appendChild(box)
-//     getInfo(user)
-// }
-//
-// getInfo()
+const getInfo = function (object, objectBox) {
+    for (const proparty in object) {
+        if (typeof object[proparty]  === "object") {
+            getInfo(object[proparty]);
+            } else {
+            const info = document.createElement('p');
+            info.innerText = `${proparty} --- ${object[proparty]}`
+            objectBox.appendChild(info);
+        }
+    }
+}
+getInfo(user, wrap);
 
 
 // const name = document.createElement('h1');
 // name.innerText = user.name;
 // wrap.appendChild(name);
-//
 // const title = document.createElement('h2');
 // title.innerText = `User Name - ${user.username}: Email - ${user.email}`;
 // wrap.appendChild(title);
-//
 // const address = document.createElement('ul');
 // address.innerText = 'Address';
 // const city = document.createElement('li');
@@ -57,20 +43,18 @@ const wrap = document.getElementById('wrap-user');
 // const geo = document.createElement('li');
 // geo.innerText = `lat - ${user.address.geo.lat}; lng - ${user.address.geo.lng}`;
 // address.appendChild(geo);
-//
 // wrap.appendChild(address);
 
 
-
-const wrapButton = document.createElement('div');
-wrapButton.classList.add('wrButton');
-wrap.appendChild(wrapButton);
+const postBox = document.getElementsByClassName('postBox')[0];
+const wrapButton = document.getElementsByClassName('buttonWrap')[0];
 const button = document.createElement('button');
 button.innerText = 'Post of current user';
 button.onclick = () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
         .then(value => value.json())
         .then(posts => {
+            postBox.innerHTML = ' ';
             for (const post of posts) {
                 const divPost = document.createElement('div');
                 divPost.classList.add('box-post');
@@ -81,26 +65,10 @@ button.onclick = () => {
                 detalPost.innerText = 'Post-details';
                 detalPost.href = `post-details.html?post=${JSON.stringify(post)}`;
                 divPost.appendChild(detalPost);
-                wrap.appendChild(divPost)
+                postBox.appendChild(divPost)
             }
         })
 }
     wrapButton.appendChild(button);
 
-
-
-
-
-// const address = document.createElement('ul');
-// address.innerText = 'Address';
-// for (const addressKey in user.address) {
-//     const addressitem = document.createElement('li');
-//     addressitem.innerText = object.value(user.address);
-//     address.appendChild(addressitem);
-// }
-// wrap.appendChild(address);
-
-// allInfo.innerText = `City - ${user.address.city}, Street - ${user.address.street}`;
-//
-// wrap.appendChild(allInfo);
 

@@ -1,0 +1,44 @@
+
+#wrap-post {
+    justify-content: center;
+    border: 1px red solid;
+    text-align: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h3 {
+    color: red;
+}
+
+.buttonWrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30%;
+}
+
+.commentBox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.box-comment {
+    width: 25%;
+    box-sizing: border-box;
+    background: silver;
+    border: 1px red solid;
+    text-align: center;
+    border-radius: 20px;
+}
+

@@ -3,7 +3,6 @@ fetch("https://jsonplaceholder.typicode.com/users")
     .then(value => value.json())
     .then(users => {
     for (const user of users) {
-
         const userBox = document.createElement('div');
         userBox.classList.add('user_box');
         const title = document.createElement('h2');
@@ -20,7 +19,9 @@ fetch("https://jsonplaceholder.typicode.com/users")
     }
 })
 
-// function crDiv(div, cl) {
-//     document.createElement('div');
-//     div.classList.add(cl);
+// function crDiv(el) {
+//     document.createElement(el);
 // }
+//
+// const div = crDiv(div);
+// console.log(div);

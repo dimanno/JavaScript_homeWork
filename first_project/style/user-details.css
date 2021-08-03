@@ -1,5 +1,5 @@
 body {
-    display: flex;
+
 }
 
 #wrap-user {
@@ -11,6 +11,29 @@ body {
     width: 100%;
 }
 
+li {
+    text-decoration: none;
+}
+
+.postBox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.box-post {
+    width: 20%;
+    box-sizing: border-box;
+    background: silver;
+    border: 1px red solid;
+    text-align: center;
+    border-radius: 20px;
+    align-items: center;
+
+}
+
 h2 {
     color: red;
 }
@@ -19,4 +42,14 @@ button {
     width: 90%;
     background: green;
     color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30%;
 }
+
+
+.buttonWrap {
+    margin-top: 30px;
+    text-align: center;
+}
+

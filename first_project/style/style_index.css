@@ -13,4 +13,14 @@
     text-align: center;
     border-radius: 20px;
     box-sizing: border-box;
+    padding: 20px;
 }
+
+button {
+   background: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30%;
+}
+
