@@ -1,39 +1,66 @@
-console.log(location.href);
+// console.log(location.href);
 
 const url = new URL(location);
-console.log(url);
+// console.log(url);
 const jsonUser = url.searchParams.get('user');
-console.log(jsonUser);
+// console.log(jsonUser);
 const user = JSON.parse(jsonUser);
+console.log(user);
+
 const wrap = document.getElementById('wrap-user');
 
-const name = document.createElement('h1');
-name.innerText = user.name;
-wrap.appendChild(name);
 
-const title = document.createElement('h2');
-title.innerText = `User Name - ${user.username}: Email - ${user.email}`;
-wrap.appendChild(title);
+// function getInfo(obj) {
+//     for (const i in obj) {
+//         // const box = document.createElement('p');
+//         if (obj.hasOwnProperty(i)) {
+//             console.log(i)
+//         }
+//     }
+//     console.log(getInfo(user));
 
-const address = document.createElement('ul');
-address.innerText = 'Address';
-const city = document.createElement('li');
-city.innerText = user.address.city;
-address.appendChild(city);
-const street = document.createElement('li');
-street.innerText = user.address.street;
-address.appendChild(street);
-const suite = document.createElement('li');
-street.innerText = user.address.suite;
-address.appendChild(suite);
-const zipcode = document.createElement('li');
-zipcode.innerText = user.address.zipcode;
-address.appendChild(zipcode);
-const geo = document.createElement('li');
-geo.innerText = `lat - ${user.address.geo.lat}; lng - ${user.address.geo.lng}`;
-address.appendChild(geo);
+//     const box = document.createElement('p');
 
-wrap.appendChild(address);
+//     // box.innerText = infoUser;
+//     if (Object.keys(user) === Object) {
+//         box.innerText = Object.entries(user);
+//     }
+//     wrap.appendChild(box)
+//     getInfo(user)
+// }
+//
+// getInfo()
+
+
+// const name = document.createElement('h1');
+// name.innerText = user.name;
+// wrap.appendChild(name);
+//
+// const title = document.createElement('h2');
+// title.innerText = `User Name - ${user.username}: Email - ${user.email}`;
+// wrap.appendChild(title);
+//
+// const address = document.createElement('ul');
+// address.innerText = 'Address';
+// const city = document.createElement('li');
+// city.innerText = user.address.city;
+// address.appendChild(city);
+// const street = document.createElement('li');
+// street.innerText = user.address.street;
+// address.appendChild(street);
+// const suite = document.createElement('li');
+// street.innerText = user.address.suite;
+// address.appendChild(suite);
+// const zipcode = document.createElement('li');
+// zipcode.innerText = user.address.zipcode;
+// address.appendChild(zipcode);
+// const geo = document.createElement('li');
+// geo.innerText = `lat - ${user.address.geo.lat}; lng - ${user.address.geo.lng}`;
+// address.appendChild(geo);
+//
+// wrap.appendChild(address);
+
+
 
 const wrapButton = document.createElement('div');
 wrapButton.classList.add('wrButton');
