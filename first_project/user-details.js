@@ -5,19 +5,23 @@ const user = JSON.parse(jsonUser);
 console.log(user);
 
 const wrap = document.getElementById('wrap-user');
-
+const list = document.createElement('ul');
+wrap.appendChild(list);
 const getInfo = function (object, objectBox) {
     for (const proparty in object) {
         if (typeof object[proparty]  === "object") {
-            getInfo(object[proparty]);
+            const objKey = document.createElement('h4');
+            objKey.innerText = `${proparty}`;
+            objectBox.appendChild(objKey);
+            getInfo(object[proparty], objectBox);
             } else {
-            const info = document.createElement('p');
+            const info = document.createElement('li');
             info.innerText = `${proparty} --- ${object[proparty]}`
             objectBox.appendChild(info);
         }
     }
 }
-getInfo(user, wrap);
+getInfo(user, list);
 
 
 // const name = document.createElement('h1');
