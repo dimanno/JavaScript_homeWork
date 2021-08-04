@@ -19,9 +19,9 @@ fetch("https://jsonplaceholder.typicode.com/users")
     }
 })
 
-// function crDiv(el) {
-//     document.createElement(el);
-// }
-//
-// const div = crDiv(div);
-// console.log(div);
+function crDiv(el, cl) {
+    document.createElement(el);
+}
+
+const div = crDiv(div);
+console.log(div);

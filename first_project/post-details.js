@@ -1,24 +1,26 @@
-console.log(location.href);
 
 const url = new URL(location);
-console.log(url);
 const jsonPost = url.searchParams.get('post')
-console.log(jsonPost);
 const post = JSON.parse(jsonPost);
 
 const wrap = document.getElementById('wrap-post');
-const boxInfo = document.createElement('div');
-boxInfo.classList.add('boxInfo');
-const id = document.createElement('h2');
-id.innerText = `Post Id - ${post.id}, User Id - ${post.userId}`;
-boxInfo.appendChild(id);
-const title = document.createElement('h3');
-title.innerText = `Titel of Post - ${post.title}`;
-boxInfo.appendChild(title);
-const bodyPost = document.createElement('p');
-bodyPost.innerText = post.body;
-boxInfo.appendChild(bodyPost);
-wrap.appendChild(boxInfo);
+const list = document.createElement('div');
+wrap.appendChild(list);
+const getInfo = function (object, objectBox) {
+    for (const proparty in object) {
+        if (typeof object[proparty] === "object") {
+            const objKey = document.createElement('h4');
+            objKey.innerText = `${proparty}`;
+            objectBox.appendChild(objKey);
+            getInfo(object[proparty], objectBox);
+        } else {
+            const info = document.createElement('p');
+            info.innerText = `${proparty} --- ${object[proparty]}`
+            objectBox.appendChild(info);
+        }
+    }
+}
+getInfo(post, list);
 
 const commentBox = document.getElementsByClassName('commentBox')[0];
 const wrapButton = document.getElementsByClassName('buttonWrap')[0];
@@ -39,7 +41,6 @@ button.onclick = () => {
                 bodyComment.innerText = comment.body;
                 divComment.appendChild(bodyComment);
                 commentBox.appendChild(divComment);
-
             }
         })
 }

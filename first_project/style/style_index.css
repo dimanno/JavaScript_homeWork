@@ -24,3 +24,9 @@ button {
     border-radius: 30%;
 }
 
+button:hover {
+    background: white;
+    color: green;
+    transition: 700ms;
+}
+
