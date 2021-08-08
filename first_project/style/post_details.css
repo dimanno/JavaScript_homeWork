@@ -1,14 +1,14 @@
 
 #wrap-post {
     justify-content: center;
-    border: 1px red solid;
+    border: 3px red solid;
     text-align: center;
     border-radius: 20px;
     box-sizing: border-box;
     width: 100%;
 }
 
-h3 {
+h4 {
     color: red;
 }
 
@@ -23,6 +23,12 @@ button {
     font-size: 20px;
     padding: 10px;
     border-radius: 30%;
+}
+
+button:hover {
+    background: white;
+    color: green;
+    transition: 700ms;
 }
 
 .commentBox {
