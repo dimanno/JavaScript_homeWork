@@ -61,44 +61,85 @@ console.log(users)
 // -  Створити функцію конструктор / клас  який описує об'єкт тегу
 // Поля :
 
-    class Object {
-        name;
-        act;
-        car;
+    class Tag {
+        name
+        actiot
 
-        constructor(name, act, car) {
+
+        constructor(name, actiot, atrrName1, atrrAction1, attrName2, attrtAction2, atrrName3, atrrAction3) {
             this.name = name;
-            this.act = act;
-            this.car = car;
+            this.actiot = actiot;
+            this.attributs = [
+                new Attribut1(atrrName1, atrrAction1),
+                new Attribut2(attrName2, attrtAction2),
+                new Attribut3(atrrName3, atrrAction3)
+            ]
         }
     }
-    -назва тегу ()
-- опис його дій
-- масив з атрибутами (2-3 атрибути максимум)
-Кожен атрибут описати як окремий який буде містити
--назву атрибуту
--опис дії атрибуту
-інформацію брати з htmlbook.ru
 
-Таким чином описати теги
--a
--div
--h1
--span
--input
--form
--option
--select
+  class Attribut1 {
+      atrrName1
+      atrrAction1
+
+      constructor(atrrName1, atrrAction1) {
+          this.atrrName1 = atrrName1;
+          this.atrrAction1 = atrrAction1;
+      }
+  }
+class Attribut2 {
+    attrName2
+    attrtAction2
+
+    constructor(attrName2, attrtAction2) {
+        this.attrName2 = attrName2;
+        this.attrtAction2 = attrtAction2;
+    }
+}
+
+class Attribut3 {
+    attrName3
+    attrtAction3
+
+    constructor(attrName3, attrtAction3) {
+        this.attrName3 = attrName3;
+        this.attrtAction3 = attrtAction3;
+    }
+}
+
+const tag = new Tag('a', 'призначений для створення посилань', 'title', 'Додає підказку до тексту посилання', 'href',
+    'Задає адресу документа, на який слід перейти', 'name', 'Встановлює імя якоря всередині документа');
+console.log(tag);
+// new Tags('span')
 
 
-Приклад результуючого об'єкту
-{
-    titleOfTag: 'area',
-        action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
-    attrs: [
-    {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
-    {/*some props and values*/},
-    {/*...*/},
-    {/*...*/},
-]
 
+// -назва тегу ()
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з htmlbook.ru
+//
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+//
+//
+// Приклад результуючого об'єкту
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},
+// ]
+//
